@@ -1,0 +1,21 @@
+name: Opik Workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  opik-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Repo
+        uses: actions/checkout@v4
+        with:
+          repository: "https://github.com/comet-ml/opik.git"
+      - name: Install Python env
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install Opik
+        run: pip install opik
+      - name: Configure Opik
+        run: opik configure
