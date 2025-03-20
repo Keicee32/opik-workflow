@@ -10,7 +10,7 @@ jobs:
       - name: Get Repo
         uses: actions/checkout@v4
         with:
-          repository: "https://github.com/comet-ml/opik.git"
+          repository: "comet-ml/opik.git"
       - name: Install Python env
         uses: actions/setup-python@v5
         with:
