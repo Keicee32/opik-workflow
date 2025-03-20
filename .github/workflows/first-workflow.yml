@@ -11,6 +11,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: "comet-ml/opik.git"
+          ref: 'main'
       - name: Install Python env
         uses: actions/setup-python@v5
         with:
