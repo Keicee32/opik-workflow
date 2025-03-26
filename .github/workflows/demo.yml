@@ -18,12 +18,12 @@ jobs:
         run: npm run test
       - name: Upload artifacts
         if: failure() && steps.upload.outcome == 'failure'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: |
             test.json
-            node_modules
+            ./node_modules
   build:
     needs: test
     runs-on: ubuntu-latest
