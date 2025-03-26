@@ -22,8 +22,8 @@ jobs:
         with:
           name: test-report
           path: |
-             test.json
-             node_modules
+            test.json
+            node_modules
   build:
     needs: test
     runs-on: ubuntu-latest
